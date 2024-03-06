@@ -1,0 +1,246 @@
+
+alexa@DESKTOP-AM42N4A MINGW64 ~ (master)
+$ cd E:\LW
+
+alexa@DESKTOP-AM42N4A MINGW64 /e/LW
+$ git init
+Initialized empty Git repository in E:/LW/.git/
+
+alexa@DESKTOP-AM42N4A MINGW64 /e/LW (master)
+$ git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+
+alexa@DESKTOP-AM42N4A MINGW64 /e/LW (master)
+$ git add README.md
+fatal: pathspec 'README.md' did not match any files
+
+alexa@DESKTOP-AM42N4A MINGW64 /e/LW (master)
+$ git add README.md
+
+alexa@DESKTOP-AM42N4A MINGW64 /e/LW (master)
+$ git commit -m "initial commit"
+[master (root-commit) 454454d] initial commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 README.md
+
+alexa@DESKTOP-AM42N4A MINGW64 /e/LW (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+alexa@DESKTOP-AM42N4A MINGW64 /e/LW (master)
+$ git branch -M main
+
+alexa@DESKTOP-AM42N4A MINGW64 /e/LW (main)
+$ cd ~/.ssh
+bash: cd: /c/Users/alexa/.ssh: No such file or directory
+
+alexa@DESKTOP-AM42N4A MINGW64 /e/LW (main)
+$ ls
+README.md
+
+alexa@DESKTOP-AM42N4A MINGW64 /e/LW (main)
+$ $ git config --global user.name "AlexandraKupreichik"
+bash: $: command not found
+
+alexa@DESKTOP-AM42N4A MINGW64 /e/LW (main)
+$ git config --global user.name "AlexandraKupreichik"
+
+alexa@DESKTOP-AM42N4A MINGW64 /e/LW (main)
+$ git config --global user.email "alexandrakupreichik@gmail.com"
+
+alexa@DESKTOP-AM42N4A MINGW64 /e/LW (main)
+$ ssh-keygen -t rsa -b 4096 -C "alexandrakupreichik@gmail.com"
+Generating public/private rsa key pair.
+Enter file in which to save the key (/c/Users/alexa/.ssh/id_rsa):
+Created directory '/c/Users/alexa/.ssh'.
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /c/Users/alexa/.ssh/id_rsa
+Your public key has been saved in /c/Users/alexa/.ssh/id_rsa.pub
+The key fingerprint is:
+SHA256:jSZ9yX5Wwvv796OleqlUZHJRpwMlaZV9aQlD85Cybgc alexandrakupreichik@gmail.com
+The key's randomart image is:
++---[RSA 4096]----+
+|            +@*++|
+|           .o+B=+|
+|           oo++..|
+|       . + E=  . |
+|      . S * +..  |
+|       o o o.=   |
+|          o.= .. |
+|          .o +o..|
+|           o+o+o*|
++----[SHA256]-----+
+
+alexa@DESKTOP-AM42N4A MINGW64 /e/LW (main)
+$ eval "$(ssh-agent -s)"
+Agent pid 1497
+
+alexa@DESKTOP-AM42N4A MINGW64 /e/LW (main)
+$ ssh-add ~/.ssh/id_rsa
+Identity added: /c/Users/alexa/.ssh/id_rsa (alexandrakupreichik@gmail.com)
+
+alexa@DESKTOP-AM42N4A MINGW64 /e/LW (main)
+$ clip < ~/.ssh/id_rsa.pub
+
+alexa@DESKTOP-AM42N4A MINGW64 /e/LW (main)
+$ git add *.c
+fatal: pathspec '*.c' did not match any files
+
+alexa@DESKTOP-AM42N4A MINGW64 /e/LW (main)
+$ git remote add origin git@github.com:AlexandraKupreichik/LW.git
+
+alexa@DESKTOP-AM42N4A MINGW64 /e/LW (main)
+$ git remote -v
+origin  git@github.com:AlexandraKupreichik/LW.git (fetch)
+origin  git@github.com:AlexandraKupreichik/LW.git (push)
+
+alexa@DESKTOP-AM42N4A MINGW64 /e/LW (main)
+$ git status
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        New.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+alexa@DESKTOP-AM42N4A MINGW64 /e/LW (main)
+$ git add .
+
+alexa@DESKTOP-AM42N4A MINGW64 /e/LW (main)
+$ git commit -m "Aded file New.txt"
+[main 3775bfb] Aded file New.txt
+ 1 file changed, 1 insertion(+)
+ create mode 100644 New.txt
+
+alexa@DESKTOP-AM42N4A MINGW64 /e/LW (main)
+$ git push
+fatal: The current branch main has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin main
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+alexa@DESKTOP-AM42N4A MINGW64 /e/LW (main)
+$ git push origin main
+The authenticity of host 'github.com (140.82.121.3)' can't be established.
+ED25519 key fingerprint is SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU.
+This key is not known by any other names
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'github.com' (ED25519) to the list of known hosts.
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (6/6), 486 bytes | 121.00 KiB/s, done.
+Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:AlexandraKupreichik/LW.git
+ * [new branch]      main -> main
+
+alexa@DESKTOP-AM42N4A MINGW64 /e/LW (main)
+$ git branch -M python
+
+alexa@DESKTOP-AM42N4A MINGW64 /e/LW (python)
+$ git commit -m "Aded python"
+On branch python
+nothing to commit, working tree clean
+
+alexa@DESKTOP-AM42N4A MINGW64 /e/LW (python)
+$ git add .
+
+alexa@DESKTOP-AM42N4A MINGW64 /e/LW (python)
+$ git commit -m "Added python files and directory"
+[python 33f6cb1] Added python files and directory
+ 11 files changed, 166 insertions(+)
+ create mode 100644 AltSTU/__init__.py
+ create mode 100644 AltSTU/__pycache__/__init__.cpython-312.pyc
+ create mode 100644 AltSTU/__pycache__/__init__.cpython-37.pyc
+ create mode 100644 AltSTU/__pycache__/settings.cpython-312.pyc
+ create mode 100644 AltSTU/__pycache__/settings.cpython-37.pyc
+ create mode 100644 AltSTU/__pycache__/urls.cpython-312.pyc
+ create mode 100644 AltSTU/__pycache__/urls.cpython-37.pyc
+ create mode 100644 AltSTU/__pycache__/wsgi.cpython-37.pyc
+ create mode 100644 AltSTU/settings.py
+ create mode 100644 AltSTU/urls.py
+ create mode 100644 AltSTU/wsgi.py
+
+alexa@DESKTOP-AM42N4A MINGW64 /e/LW (python)
+$ git log -graph
+fatal: unrecognized argument: -graph
+
+alexa@DESKTOP-AM42N4A MINGW64 /e/LW (python)
+$ git log --graph
+* commit 33f6cb1421ef73e54d1349bb753a4933b838a692 (HEAD -> python)
+| Author: AlexandraKupreichik <alexandrakupreichik@gmail.com>
+| Date:   Mon Feb 19 15:17:59 2024 +0300
+|
+|     Added python files and directory
+|
+* commit 3775bfbba89357595b2f85f3096d88b609fc8de1 (origin/main)
+| Author: AlexandraKupreichik <alexandrakupreichik@gmail.com>
+| Date:   Mon Feb 19 15:14:56 2024 +0300
+|
+|     Aded file New.txt
+|
+* commit 454454d119c2538ba51a77f00ca3d51455f06f1a
+  Author: Aliaksandra Kupreichyk <alexandrakupreichik@gmail.com>
+  Date:   Mon Feb 19 14:56:21 2024 +0300
+
+      initial commit
+
+alexa@DESKTOP-AM42N4A MINGW64 /e/LW (python)
+$ git checkout main
+Switched to a new branch 'main'
+branch 'main' set up to track 'origin/main'.
+
+alexa@DESKTOP-AM42N4A MINGW64 /e/LW (main)
+$ git commit -m "перешли на ветку"
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+alexa@DESKTOP-AM42N4A MINGW64 /e/LW (main)
+$ git log --graph
+* commit 3775bfbba89357595b2f85f3096d88b609fc8de1 (HEAD -> main, origin/main)
+| Author: AlexandraKupreichik <alexandrakupreichik@gmail.com>
+| Date:   Mon Feb 19 15:14:56 2024 +0300
+|
+|     Aded file New.txt
+|
+* commit 454454d119c2538ba51a77f00ca3d51455f06f1a
+  Author: Aliaksandra Kupreichyk <alexandrakupreichik@gmail.com>
+  Date:   Mon Feb 19 14:56:21 2024 +0300
+
+      initial commit
+
+alexa@DESKTOP-AM42N4A MINGW64 /e/LW (main)
+$ git push origin main
+Everything up-to-date
+
+alexa@DESKTOP-AM42N4A MINGW64 /e/LW (main)
+$ git push origin python
+Enumerating objects: 15, done.
+Counting objects: 100% (15/15), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (14/14), done.
+Writing objects: 100% (14/14), 5.80 KiB | 60.00 KiB/s, done.
+Total 14 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), done.
+remote:
+remote: Create a pull request for 'python' on GitHub by visiting:
+remote:      https://github.com/AlexandraKupreichik/LW/pull/new/python
+remote:
+To github.com:AlexandraKupreichik/LW.git
+ * [new branch]      python -> python
+
+alexa@DESKTOP-AM42N4A MINGW64 /e/LW (main)
+$
