@@ -93,7 +93,7 @@ $ git add *.c
 fatal: pathspec '*.c' did not match any files
 
 alexa@DESKTOP-AM42N4A MINGW64 /e/LW (main)
-$ git remote add origin git@github.com:AlexandraKupreichik/LW.git
+git remote add origin git@github.com:AlexandraKupreichik/repository.git
 
 alexa@DESKTOP-AM42N4A MINGW64 /e/LW (main)
 $ git remote -v
